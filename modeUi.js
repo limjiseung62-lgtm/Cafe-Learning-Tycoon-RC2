@@ -252,9 +252,8 @@ export class ModeFlow {
     }
     catch {
         e('backup-message').textContent = '백업을 만들지 못했어요.';
-    } }; e('import-growth').onchange = async () => { const file = e('import-growth').files?.[0]; if (!file)
-        return; try {
-        const save = parseGrowthBackup(await file.text());
+    } }; const restoreText = async (text) => { try {
+        const save = parseGrowthBackup(text);
         await checkBackupRun(save);
         this.confirm('현재 카페를 별도 보관한 뒤 백업으로 복원할까요?', () => { void (async () => { if (supportsGrowthLock() && !await ensureGrowthWriteLock()) {
             e('backup-message').textContent = '다른 카페 창을 먼저 닫아 주세요.';
@@ -266,7 +265,16 @@ export class ModeFlow {
     }
     catch (error) {
         e('backup-message').textContent = error instanceof Error ? error.message : '복원 실패 · 기존 저장 보존';
-    } }; }
+    } }; e('import-growth').onchange = async () => { const file = e('import-growth').files?.[0]; if (!file)
+        return; if (file.size > 4000000) {
+        e('backup-message').textContent = '백업 파일이 너무 커요. 기존 저장은 유지됩니다.';
+        return;
+    } await restoreText(await file.text()); }; if (deploymentPrefix()) {
+        const alternative = document.createElement('details');
+        alternative.innerHTML = '<summary>파일 선택이 안 되나요? JSON 텍스트로 복원</summary><label>카페 백업 JSON<textarea id="backup-json-text" maxlength="4000000" style="width:100%;box-sizing:border-box;min-height:100px" placeholder="카페 백업 JSON 내용을 붙여넣으세요"></textarea></label><button id="restore-backup-text" class="secondary">JSON 확인 후 복원</button><p class="hint">기기에서만 처리하며 서버에 전송하지 않아요. 복원 전 현재 테스트 카페를 별도 보관해요.</p>';
+        wrap.append(alternative);
+        e('restore-backup-text').onclick = () => { void restoreText(e('backup-json-text').value); };
+    } }
     confirm(message, action) { if (document.getElementById('mode-confirm'))
         return; const dialog = document.createElement('section'); dialog.id = 'mode-confirm'; dialog.className = 'mode-confirm'; dialog.setAttribute('role', 'dialog'); dialog.setAttribute('aria-modal', 'true'); dialog.setAttribute('aria-label', '카페 확인'); dialog.innerHTML = '<div><h2>한 번 더 확인해요</h2><p>' + message + '</p><button id="confirm-cancel" class="secondary">취소</button><button id="confirm-yes" class="primary">확인하고 진행</button></div>'; document.body.append(dialog); e('confirm-cancel').onclick = () => dialog.remove(); e('confirm-yes').onclick = () => { if (!dialog.isConnected)
         return; dialog.remove(); action(); }; e('confirm-cancel').focus(); }

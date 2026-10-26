@@ -1491,8 +1491,8 @@
     },
     {
       "file": "modeUi.js",
-      "bytes": 32931,
-      "sha256": "fb65e3b5aea8399acce08b89ce83c6cc8a2b5b9fcd398f90ab402e523c7f446c"
+      "bytes": 33937,
+      "sha256": "be8542c67d12bb8f0a50463389ce7260f2e815c3b9db220e4f3216cbbc621c3e"
     },
     {
       "file": "motionExpansionCatalog.js",
@@ -1755,6 +1755,6 @@
       "sha256": "eef997c8d243ebaaec666a156794ae3a99e1414815971356cd1d66c02f44a5a9"
     }
   ],
-  "totalBytes": 55778680,
+  "totalBytes": 55779686,
   "qaFilesExcluded": true
 }
