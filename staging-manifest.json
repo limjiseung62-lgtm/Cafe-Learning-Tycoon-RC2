@@ -1066,8 +1066,8 @@
     },
     {
       "file": "cafeResults.js",
-      "bytes": 15490,
-      "sha256": "5314c688feb24b4e2797bbbcd8a647747345a4ad1b82960bf205f6257dbb5e2a"
+      "bytes": 15858,
+      "sha256": "7b0278895d77d2639034707e34a52b3373046c30c8b7605d1cd908aecf97710e"
     },
     {
       "file": "cafeRun.js",
@@ -1491,8 +1491,8 @@
     },
     {
       "file": "modeUi.js",
-      "bytes": 32655,
-      "sha256": "91862b4033f18668acceefdcb2e13b1cf65e47ae2794d43f1884258083c6be43"
+      "bytes": 32931,
+      "sha256": "fb65e3b5aea8399acce08b89ce83c6cc8a2b5b9fcd398f90ab402e523c7f446c"
     },
     {
       "file": "motionExpansionCatalog.js",
@@ -1755,6 +1755,6 @@
       "sha256": "eef997c8d243ebaaec666a156794ae3a99e1414815971356cd1d66c02f44a5a9"
     }
   ],
-  "totalBytes": 55778036,
+  "totalBytes": 55778680,
   "qaFilesExcluded": true
 }

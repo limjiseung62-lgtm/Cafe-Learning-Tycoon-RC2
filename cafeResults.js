@@ -19,7 +19,12 @@ export async function resultPng(lines) { await document.fonts.ready; const canva
     }
     wrapped.push(current);
 } canvas.width = 1200; canvas.height = 150 + wrapped.length * 44; const ctx = canvas.getContext('2d'); ctx.fillStyle = '#faf4e8'; ctx.fillRect(0, 0, canvas.width, canvas.height); ctx.fillStyle = '#fffdf8'; ctx.fillRect(36, 30, 1128, canvas.height - 60); ctx.fillStyle = '#493d31'; ctx.font = font; wrapped.forEach((line, i) => ctx.fillText(line, 80, 90 + i * 44)); return new Promise((resolve, reject) => canvas.toBlob(blob => blob ? resolve(blob) : reject(Error('이미지를 만들지 못했어요.')), 'image/png')); }
-function saveBlob(blob, name) { const url = URL.createObjectURL(blob), a = document.createElement('a'); a.href = url; a.download = name; document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 10000); }
+function saveBlob(blob, name) { const url = URL.createObjectURL(blob), a = document.createElement('a'); a.href = url; a.download = name; const status = document.getElementById('result-download-status'); a.id = 'prepared-result-file'; a.textContent = name + ' · 파일 저장'; a.className = 'secondary'; if (status) {
+    document.getElementById('prepared-result-file')?.remove();
+    status.after(a);
+}
+else
+    document.body.append(a); a.click(); setTimeout(() => { URL.revokeObjectURL(url); a.remove(); }, 120000); }
 /** Wrong answers remain visible even when there is insufficient evidence to judge a skill. */
 export function reviewRecommendationsHtml(report) {
     const groups = new Map();
@@ -51,7 +56,7 @@ export function mountCafeResults(game, analytics) {
     const download = section.querySelector('#download-result');
     download.onclick = async () => { download.disabled = true; try {
         saveBlob(await resultPng(lines), 'cafe-learning-result.png');
-        status.textContent = '결과표 이미지를 저장했어요.';
+        status.textContent = '결과표 파일을 준비했어요. 다운로드가 시작되지 않으면 아래 파일 저장 링크를 눌러 주세요.';
     }
     catch (e) {
         status.textContent = e instanceof Error ? e.message : '저장하지 못했어요. 인쇄/PDF 저장을 사용해 주세요.';

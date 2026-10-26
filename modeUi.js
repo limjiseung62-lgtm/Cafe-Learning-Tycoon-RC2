@@ -241,9 +241,14 @@ export class ModeFlow {
         const link = document.createElement('a');
         link.href = url;
         link.download = r.save.portfolio ? 'cafe-all-cafes-v19c-backup.json' : 'cafe-growth-backup.json';
+        link.textContent = '백업 JSON 파일 저장';
+        link.id = 'prepared-backup-file';
+        link.className = 'secondary';
+        wrap.querySelector('#prepared-backup-file')?.remove();
+        wrap.append(link);
         link.click();
-        setTimeout(() => URL.revokeObjectURL(url), 30000);
-        e('backup-message').textContent = '모든 카페·공통 학습 기록·마을·중단 회차 백업을 만들었어요.';
+        setTimeout(() => { URL.revokeObjectURL(url); link.remove(); }, 120000);
+        e('backup-message').textContent = '백업 파일을 준비했어요. 다운로드가 시작되지 않으면 파일 저장 링크를 눌러 주세요.';
     }
     catch {
         e('backup-message').textContent = '백업을 만들지 못했어요.';
