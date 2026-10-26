@@ -1,14 +1,14 @@
-import { syncSharedFurniture } from './cafePortfolio.js';
-import { syncLake, desiredLakeMini } from './lakeDistrict.js';
-import { syncVillage, villageMetrics } from './village.js';
-import { beginMiniSession, pauseCredit, pollMini } from './miniGames.js';
-import { captureRoster } from "./staffRecruitment.js";
-import { economyState, settleGrowthEconomy } from './growthEconomy.js';
-import { longStateFor } from './longGrowthUi.js';
-import { createGrowthSession, setGrowthExpected, growthBaseFor } from './sessionFactory.js';
-import { restoreGrowthRun, captureRun, studyRecord, adaptiveLevel } from './growthCampaign.js';
-import { LearningSession } from './learningSession.js';
-import { providerForPool } from './learningIntegration.js';
+import { syncSharedFurniture } from './cafePortfolio.js?v=2.0.0-rc.2-746e69824716';
+import { syncLake, desiredLakeMini } from './lakeDistrict.js?v=2.0.0-rc.2-746e69824716';
+import { syncVillage, villageMetrics } from './village.js?v=2.0.0-rc.2-746e69824716';
+import { beginMiniSession, pauseCredit, pollMini } from './miniGames.js?v=2.0.0-rc.2-746e69824716';
+import { captureRoster } from "./staffRecruitment.js?v=2.0.0-rc.2-746e69824716";
+import { economyState, settleGrowthEconomy } from './growthEconomy.js?v=2.0.0-rc.2-746e69824716';
+import { longStateFor } from './longGrowthUi.js?v=2.0.0-rc.2-746e69824716';
+import { createGrowthSession, setGrowthExpected, growthBaseFor } from './sessionFactory.js?v=2.0.0-rc.2-746e69824716';
+import { restoreGrowthRun, captureRun, studyRecord, adaptiveLevel } from './growthCampaign.js?v=2.0.0-rc.2-746e69824716';
+import { LearningSession } from './learningSession.js?v=2.0.0-rc.2-746e69824716';
+import { providerForPool } from './learningIntegration.js?v=2.0.0-rc.2-746e69824716';
 class GrowthRuntime {
     grants = null;
     anchorPause = 0;

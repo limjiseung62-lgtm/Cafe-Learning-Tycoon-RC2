@@ -1,6 +1,6 @@
-import { VillageLife, lifeProfiles, arrangeNameplates, separation, talkDistance } from './villageLife.js';
-import { customerPoseArt, selectCustomerPose, poseGeometry } from './customerPoses.js';
-import { escapeText as esc } from './questionRenderer.js';
+import { VillageLife, lifeProfiles, arrangeNameplates, separation, talkDistance } from './villageLife.js?v=2.0.0-rc.2-746e69824716';
+import { customerPoseArt, selectCustomerPose, poseGeometry } from './customerPoses.js?v=2.0.0-rc.2-746e69824716';
+import { escapeText as esc } from './questionRenderer.js?v=2.0.0-rc.2-746e69824716';
 /** Presentation controller for the existing NPCs. No economic or persistent progression mutations. */
 export class VillageSocial {
     o;

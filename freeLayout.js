@@ -1,11 +1,11 @@
-import { furnitureFor } from './furnitureCatalog.js';
-import { prepareFurniture, furnitureUnlocked } from './furnitureUnlocks.js';
-import { freeConnected } from './freeNavigation.js';
-import { createSpace } from './spatial.js';
-import { defaultFreePlan, freeKey, seatBudget, tableKinds, freeParts, freeFloor, freeFixed, wallDecor, freeDecorBox, convertLegacy } from './freeLayoutModel.js';
-import { overlap } from './layoutModel.js';
-import { cafeGrowthBalance } from './modeBalance.js';
-import { allDecorationCatalog as decorationCatalog } from './longGrowthConfig.js';
+import { furnitureFor } from './furnitureCatalog.js?v=2.0.0-rc.2-746e69824716';
+import { prepareFurniture, furnitureUnlocked } from './furnitureUnlocks.js?v=2.0.0-rc.2-746e69824716';
+import { freeConnected } from './freeNavigation.js?v=2.0.0-rc.2-746e69824716';
+import { createSpace } from './spatial.js?v=2.0.0-rc.2-746e69824716';
+import { defaultFreePlan, freeKey, seatBudget, tableKinds, freeParts, freeFloor, freeFixed, wallDecor, freeDecorBox, convertLegacy } from './freeLayoutModel.js?v=2.0.0-rc.2-746e69824716';
+import { overlap } from './layoutModel.js?v=2.0.0-rc.2-746e69824716';
+import { cafeGrowthBalance } from './modeBalance.js?v=2.0.0-rc.2-746e69824716';
+import { allDecorationCatalog as decorationCatalog } from './longGrowthConfig.js?v=2.0.0-rc.2-746e69824716';
 const memo = new Map();
 export const freeDiagnostics = { checks: 0, paths: 0, hits: 0 };
 export function basicFree(p) { try {

@@ -1,12 +1,12 @@
-import { openFreeEditor } from './freeLayoutEditor.js';
-import { planFor, defaultPlan, validatePlan, commitPlan } from './cafeLayout.js';
-import { layoutFacilities, tableRect, decorRect } from './layoutModel.js';
-import { createSpace, floorPath, hallGrowthSpecs } from './spatial.js';
-import { branchRoom, branchCatalog } from './growthBranch.js';
-import { sprite } from './art.js';
-import { allDecorationCatalog as decorationCatalog } from './longGrowthConfig.js';
-import { escapeText as esc } from './questionRenderer.js';
-import { ensureGrowthWriteLock, supportsGrowthLock } from './growthWriteLock.js';
+import { openFreeEditor } from './freeLayoutEditor.js?v=2.0.0-rc.2-746e69824716';
+import { planFor, defaultPlan, validatePlan, commitPlan } from './cafeLayout.js?v=2.0.0-rc.2-746e69824716';
+import { layoutFacilities, tableRect, decorRect } from './layoutModel.js?v=2.0.0-rc.2-746e69824716';
+import { createSpace, floorPath, hallGrowthSpecs } from './spatial.js?v=2.0.0-rc.2-746e69824716';
+import { branchRoom, branchCatalog } from './growthBranch.js?v=2.0.0-rc.2-746e69824716';
+import { sprite } from './art.js?v=2.0.0-rc.2-746e69824716';
+import { allDecorationCatalog as decorationCatalog } from './longGrowthConfig.js?v=2.0.0-rc.2-746e69824716';
+import { escapeText as esc } from './questionRenderer.js?v=2.0.0-rc.2-746e69824716';
+import { ensureGrowthWriteLock, supportsGrowthLock } from './growthWriteLock.js?v=2.0.0-rc.2-746e69824716';
 export async function openLegacyLayoutEditor(repo, initial, onClose) {
     document.getElementById('layout-editor')?.remove();
     const dialog = document.createElement('section');

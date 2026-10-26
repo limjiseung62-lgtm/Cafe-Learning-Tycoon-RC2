@@ -1,4 +1,4 @@
-import { createLongGrowth, grantDecoration } from './longGrowth.js';
+import { createLongGrowth, grantDecoration } from './longGrowth.js?v=2.0.0-rc.2-746e69824716';
 export const villageStages = [
     { stage: 1, name: '작은 마을', points: 0, sessions: 0, quests: 0, trust: 0, message: '이웃과 첫 인사를 나눠요.' },
     { stage: 2, name: '활기찬 광장', points: 25, sessions: 1, quests: 1, trust: 1, message: '광장이 새롭게 단장됐어요!' },

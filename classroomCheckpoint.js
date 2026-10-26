@@ -1,11 +1,11 @@
-import { validFreeLayouts } from './freeLayout.js';
-import { validLayouts } from './cafeLayout.js';
-import { validRoster, captureRoster } from "./staffRecruitment.js";
-import { recruitById } from "./recruitConfig.js";
-import { decodeGuestCheckpoint } from './guestCheckpoint.js';
-import { validEventCheckpoint } from './cafeEvents.js';
+import { validFreeLayouts } from './freeLayout.js?v=2.0.0-rc.2-746e69824716';
+import { validLayouts } from './cafeLayout.js?v=2.0.0-rc.2-746e69824716';
+import { validRoster, captureRoster } from "./staffRecruitment.js?v=2.0.0-rc.2-746e69824716";
+import { recruitById } from "./recruitConfig.js?v=2.0.0-rc.2-746e69824716";
+import { decodeGuestCheckpoint } from './guestCheckpoint.js?v=2.0.0-rc.2-746e69824716';
+import { validEventCheckpoint } from './cafeEvents.js?v=2.0.0-rc.2-746e69824716';
 export const incompleteRunHistory = new WeakSet();
-import { menuDefinitions } from './data.js';
+import { menuDefinitions } from './data.js?v=2.0.0-rc.2-746e69824716';
 export function classroomCafeCheckpoint(g) { return { version: 1, ...g.freeLayouts && g.mode === 'CAFE_GROWTH' ? { freeLayouts: structuredClone(g.freeLayouts) } : {}, ...g.layouts && g.mode === 'CAFE_GROWTH' ? { layouts: structuredClone(g.layouts) } : {}, ...g.roster && g.mode === 'CAFE_GROWTH' ? { roster: captureRoster(g.roster, g.service.paid) } : {}, ...g.events.enabled ? { eventState: g.events.checkpoint(), guests: structuredClone(g.guests) } : {}, cafeLevel: g.cafeLevel, money: g.money, warehouseLevel: g.warehouseLevel, menus: g.menus.map(m => ({ id: m.menuId, level: m.currentLevel, stock: m.stock })), staff: g.service.paid.map(w => ({ ...g.roster ? { id: w.staffId } : {}, level: w.level })), stats: { ...g.stats }, production: g.successfulProduction, regularMemory: { ...g.regularMemory }, itemPurchases: { ...g.itemPurchases }, golden: g.goldenRemaining, booster: g.boosterRemaining, vip: g.vipPending, run: g.run ? { selected: [...g.run.selected], finalPaid: g.run.finalPaid, finalAssigned: incompleteRunHistory.has(g) ? null : g.run.finalAssigned, finalRewarded: g.run.finalRewarded, bonusRevenue: g.run.bonusRevenue } : null }; }
 export function restoreClassroomCafe(g, value) { if (g.mode !== 'CLASS_MATCH')
     return false; return restoreCafeCheckpoint(g, value); }

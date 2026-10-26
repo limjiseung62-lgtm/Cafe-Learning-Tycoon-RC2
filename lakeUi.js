@@ -1,15 +1,15 @@
-import { growthReaction } from './villageGrowthVisual.js';
-import { VillageSocial } from './villageSocial.js';
-import { VillageDialogue } from './villageDialogue.js';
-import { residentLine, lifeProfiles } from './villageLife.js';
-import { ensureGrowthWriteLock } from './growthWriteLock.js';
-import { ensurePortfolio, foundSecondCafe } from './cafePortfolio.js';
-import { lakeResidents, lakeSpots, lakeQuests, talkLake, visitLake, acceptLakeQuest, syncLake, lakeQuestReady, claimLakeQuest } from './lakeDistrict.js';
-import { escapeText as esc } from './questionRenderer.js';
-import { lakeScene } from './villageSceneData.js';
-import { restoreSceneLocation, sceneTarget } from './villageNavigation.js';
-import { sceneMarkup, ensureVillageSceneStyle, markSceneFounded } from './villageSceneArt.js';
-import { VillageExplorer } from './villageExplorer.js';
+import { growthReaction } from './villageGrowthVisual.js?v=2.0.0-rc.2-746e69824716';
+import { VillageSocial } from './villageSocial.js?v=2.0.0-rc.2-746e69824716';
+import { VillageDialogue } from './villageDialogue.js?v=2.0.0-rc.2-746e69824716';
+import { residentLine, lifeProfiles } from './villageLife.js?v=2.0.0-rc.2-746e69824716';
+import { ensureGrowthWriteLock } from './growthWriteLock.js?v=2.0.0-rc.2-746e69824716';
+import { ensurePortfolio, foundSecondCafe } from './cafePortfolio.js?v=2.0.0-rc.2-746e69824716';
+import { lakeResidents, lakeSpots, lakeQuests, talkLake, visitLake, acceptLakeQuest, syncLake, lakeQuestReady, claimLakeQuest } from './lakeDistrict.js?v=2.0.0-rc.2-746e69824716';
+import { escapeText as esc } from './questionRenderer.js?v=2.0.0-rc.2-746e69824716';
+import { lakeScene } from './villageSceneData.js?v=2.0.0-rc.2-746e69824716';
+import { restoreSceneLocation, sceneTarget } from './villageNavigation.js?v=2.0.0-rc.2-746e69824716';
+import { sceneMarkup, ensureVillageSceneStyle, markSceneFounded } from './villageSceneArt.js?v=2.0.0-rc.2-746e69824716';
+import { VillageExplorer } from './villageExplorer.js?v=2.0.0-rc.2-746e69824716';
 let destroyLake;
 export async function openLake(repo, back, enterCafe) {
     destroyLake?.();

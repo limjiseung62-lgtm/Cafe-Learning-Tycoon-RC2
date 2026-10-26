@@ -1,7 +1,7 @@
-import { freeFloorRoute } from './freeNavigation.js';
-import { createFreeSpace, freeBody, freeKey } from './freeLayoutModel.js';
-import { applyPlan, layoutKey } from './layoutModel.js';
-import { balance } from './config.js';
+import { freeFloorRoute } from './freeNavigation.js?v=2.0.0-rc.2-746e69824716';
+import { createFreeSpace, freeBody, freeKey } from './freeLayoutModel.js?v=2.0.0-rc.2-746e69824716';
+import { applyPlan, layoutKey } from './layoutModel.js?v=2.0.0-rc.2-746e69824716';
+import { balance } from './config.js?v=2.0.0-rc.2-746e69824716';
 // Coordinates are floor contact points, in percent of the full 3:2 room image.
 // All six rooms deliberately retain a clear floor; furniture uses the existing atlas.
 const centers = [

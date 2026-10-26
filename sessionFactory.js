@@ -1,9 +1,9 @@
-import { desiredLakeMini } from './lakeDistrict.js';
-import { recruitById } from "./recruitConfig.js";
-import { CafeGame } from './game.js';
-import { menuDefinitions } from './data.js';
-import { policyFor } from './sessionModes.js';
-import { createGrowthSave, validateGrowthSave } from './growthSave.js';
+import { desiredLakeMini } from './lakeDistrict.js?v=2.0.0-rc.2-746e69824716';
+import { recruitById } from "./recruitConfig.js?v=2.0.0-rc.2-746e69824716";
+import { CafeGame } from './game.js?v=2.0.0-rc.2-746e69824716';
+import { menuDefinitions } from './data.js?v=2.0.0-rc.2-746e69824716';
+import { policyFor } from './sessionModes.js?v=2.0.0-rc.2-746e69824716';
+import { createGrowthSave, validateGrowthSave } from './growthSave.js?v=2.0.0-rc.2-746e69824716';
 const growthExpected = new WeakMap();
 export const setGrowthExpected = (g, s) => growthExpected.set(g, structuredClone(s));
 export const growthExpectedFor = (g) => growthExpected.get(g);

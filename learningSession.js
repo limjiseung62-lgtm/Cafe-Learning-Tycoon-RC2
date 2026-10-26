@@ -1,5 +1,5 @@
-import { gradeAnswer } from './reading.js';
-import { normalizeAnswer } from './questionPack.js';
+import { gradeAnswer } from './reading.js?v=2.0.0-rc.2-746e69824716';
+import { normalizeAnswer } from './questionPack.js?v=2.0.0-rc.2-746e69824716';
 export const learningConfig = { remediationGap: 3, recentWindow: 3, maxQueue: 32 };
 export class LearningSession {
     provider;

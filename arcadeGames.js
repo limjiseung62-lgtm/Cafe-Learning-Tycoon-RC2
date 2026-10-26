@@ -1,6 +1,6 @@
-import { newSort, sortOrder, tickSort } from './sortGame.js';
-import { newMachine, machineBlueprint, rotatePipe } from './machineGame.js';
-import { newTray, trayMap } from './trayGame.js';
+import { newSort, sortOrder, tickSort } from './sortGame.js?v=2.0.0-rc.2-746e69824716';
+import { newMachine, machineBlueprint, rotatePipe } from './machineGame.js?v=2.0.0-rc.2-746e69824716';
+import { newTray, trayMap } from './trayGame.js?v=2.0.0-rc.2-746e69824716';
 export function newArcade(kind, difficulty, seed, now) { return kind === 'sort' ? newSort(seed, difficulty, now) : kind === 'machine' ? newMachine(seed, difficulty, now) : newTray(seed, difficulty, now); }
 export function tickArcade(s, now) { if (s.endedAt !== undefined)
     return; if (s.kind === 'sort')

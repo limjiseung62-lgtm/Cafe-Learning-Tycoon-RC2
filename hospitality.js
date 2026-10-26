@@ -1,4 +1,4 @@
-import { helperCatalog, hospitalityBalance as b } from './hospitalityConfig.js';
+import { helperCatalog, hospitalityBalance as b } from './hospitalityConfig.js?v=2.0.0-rc.2-746e69824716';
 export class Hospitality {
     enabled = false;
     questions = [];

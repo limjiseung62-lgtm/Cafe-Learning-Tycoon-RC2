@@ -1,6 +1,6 @@
-import { validateGrowthSave } from './growthSave.js';
-import { restoreGrowthRun } from './growthCampaign.js';
-import { questionCatalog } from './questionPack.js';
+import { validateGrowthSave } from './growthSave.js?v=2.0.0-rc.2-746e69824716';
+import { restoreGrowthRun } from './growthCampaign.js?v=2.0.0-rc.2-746e69824716';
+import { questionCatalog } from './questionPack.js?v=2.0.0-rc.2-746e69824716';
 export function exportGrowth(save) { if (!validateGrowthSave(save))
     throw Error('저장 데이터를 확인해 주세요.'); return JSON.stringify({ format: save.portfolio ? 'cafe-growth-backup-v19c' : 'cafe-growth-backup-v16', exportedAt: new Date().toISOString(), save }, null, 2); }
 export function parseGrowthBackup(text) { if (text.length > 4000000)

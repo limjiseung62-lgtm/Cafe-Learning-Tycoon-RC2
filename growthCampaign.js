@@ -1,13 +1,13 @@
-import { validMiniSession, validMiniCollection, pauseCredit, expireMini } from './miniGames.js';
-import { validSpecialization } from './specialization.js';
-import { validBranch } from "./growthBranch.js";
-import { validateGrowthSave } from './growthSave.js';
-import { createGrowthSession } from './sessionFactory.js';
-import { classroomCafeCheckpoint, restoreCafeCheckpoint } from './classroomCheckpoint.js';
-import { LearningSession, LearningProgressRepository } from './learningSession.js';
-import { LearningAnalyticsV1 } from './learningAnalytics.js';
-import { providerForPool } from './learningIntegration.js';
-import { validAbilityRun } from "./staffAbilities.js";
+import { validMiniSession, validMiniCollection, pauseCredit, expireMini } from './miniGames.js?v=2.0.0-rc.2-746e69824716';
+import { validSpecialization } from './specialization.js?v=2.0.0-rc.2-746e69824716';
+import { validBranch } from "./growthBranch.js?v=2.0.0-rc.2-746e69824716";
+import { validateGrowthSave } from './growthSave.js?v=2.0.0-rc.2-746e69824716';
+import { createGrowthSession } from './sessionFactory.js?v=2.0.0-rc.2-746e69824716';
+import { classroomCafeCheckpoint, restoreCafeCheckpoint } from './classroomCheckpoint.js?v=2.0.0-rc.2-746e69824716';
+import { LearningSession, LearningProgressRepository } from './learningSession.js?v=2.0.0-rc.2-746e69824716';
+import { LearningAnalyticsV1 } from './learningAnalytics.js?v=2.0.0-rc.2-746e69824716';
+import { providerForPool } from './learningIntegration.js?v=2.0.0-rc.2-746e69824716';
+import { validAbilityRun } from "./staffAbilities.js?v=2.0.0-rc.2-746e69824716";
 export const withoutCampaign = (save) => { const copy = structuredClone(save); delete copy.campaign; delete copy.eventState; delete copy.portfolio; return copy; };
 const goodInt = (n) => Number.isSafeInteger(n) && Number(n) >= 0;
 export function validCampaign(value) { try {

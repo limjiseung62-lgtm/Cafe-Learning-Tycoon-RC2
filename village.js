@@ -1,4 +1,4 @@
-import { validVillageProgression, progressionMini, availableStage } from './villageProgression.js';
+import { validVillageProgression, progressionMini, availableStage } from './villageProgression.js?v=2.0.0-rc.2-746e69824716';
 export const villageSize = { width: 24, height: 18 };
 export const buildings = [
     { id: 'cafe', name: '내 카페', art: 0, x: 1, y: 1, w: 5, h: 4, door: { x: 3, y: 5 } },

@@ -1,7 +1,7 @@
-import { specializationById } from './specializationConfig.js';
-import { customers, menuDefinitions } from './data.js';
-import { specialDefinition, specialTypes } from './phase4Config.js';
-import { hospitalityDefinition, helperCatalog } from './hospitalityConfig.js';
+import { specializationById } from './specializationConfig.js?v=2.0.0-rc.2-746e69824716';
+import { customers, menuDefinitions } from './data.js?v=2.0.0-rc.2-746e69824716';
+import { specialDefinition, specialTypes } from './phase4Config.js?v=2.0.0-rc.2-746e69824716';
+import { hospitalityDefinition, helperCatalog } from './hospitalityConfig.js?v=2.0.0-rc.2-746e69824716';
 export function decodeGuestCheckpoint(value, g, level) {
     try {
         const items = value;
